@@ -8,23 +8,19 @@ import java.util.List;
 
 public class OrderDTO {
 
-    @NotEmpty
     @Positive
     private Long id;
 
-    @NotBlank
+
     @Size(min = 2, max = 64)
     private String client;
 
-    @PastOrPresent
-    @NotNull
+
     private Date date;
 
-    @NotBlank
     @Size(min = 5, max = 64)
     private String address;
 
-    @NotNull
     private List<OrderLine> orderLines;
 
     public OrderDTO() {

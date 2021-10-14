@@ -9,17 +9,17 @@ public class OrderEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "Id", nullable = false)
+    @Column(name = "Id")
     private Long id;
 
-    @Column(name = "Client", length = 64, nullable = false)
+    @Column(name = "Client", length = 64)
     private String client;
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "Date", nullable = false)
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "Date")
     private Date date;
 
-    @Column(name = "Address", nullable = false)
+    @Column(name = "Address")
     private String address;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
